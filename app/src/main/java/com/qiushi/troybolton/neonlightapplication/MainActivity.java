@@ -24,21 +24,24 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 							findViewById(R.id.textView2), findViewById(R.id.textView1)};
 
 		handler = new Handler();
-		handler.postDelayed(this, 350);
+		// Loop every 300 ms
+		handler.postDelayed(this, 300);
 	}
 
 	@Override
 	public void run() {
 		int nextColorPointer = currentColorPointer;
 		for (int i = views.length - 1; i >= 0; i--) {
+			// Set background color for current view
 			views[i].setBackgroundColor(colors[nextColorPointers[nextColorPointer]]);
-
+			// Get the index of color for next background view
 			nextColorPointer = nextColorPointers[nextColorPointer];
 		}
 		currentColorPointer++;
 		if (currentColorPointer == 6) {
 			currentColorPointer = 0;
 		}
-		handler.postDelayed(this, 350);
+		// Loop every 300 ms
+		handler.postDelayed(this, 300);
 	}
 }
