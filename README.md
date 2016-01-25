@@ -1,3 +1,3 @@
 # NeonlightApplication
 
-![My image](TroyBoltonX.github.com/Neonlight/img/image.jpg)
+![My image](/img/image.jpg)
