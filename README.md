@@ -1,7 +1,5 @@
 # NeonlightApplication
 
-![My image](/img/image.png)
-
 <p align="center">
-  <img src="/img/image.png" alt="My image" width="100px" height="100px"/>
+  <img src="/img/image.png" alt="My image" width="400px" height="400px"/>
 </p>
