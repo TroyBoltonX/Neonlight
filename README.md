@@ -1,3 +1,3 @@
 # NeonlightApplication
 
-![My image](/img/image.jpg)
+![My image](/img/image.png)
