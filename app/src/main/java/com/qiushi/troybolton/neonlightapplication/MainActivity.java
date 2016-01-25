@@ -18,10 +18,27 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		views = new View[] {findViewById(R.id.textView6), findViewById(R.id.textView5),
+							findViewById(R.id.textView4), findViewById(R.id.textView3),
+							findViewById(R.id.textView2), findViewById(R.id.textView1)};
+
+		handler = new Handler();
+		handler.postDelayed(this, 350);
 	}
 
 	@Override
 	public void run() {
+		int nextColorPointer = currentColorPointer;
+		for (int i = views.length - 1; i >= 0; i--) {
+			views[i].setBackgroundColor(colors[nextColorPointers[nextColorPointer]]);
 
+			nextColorPointer = nextColorPointers[nextColorPointer];
+		}
+		currentColorPointer++;
+		if (currentColorPointer == 6) {
+			currentColorPointer = 0;
+		}
+		handler.postDelayed(this, 350);
 	}
 }
